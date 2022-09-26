@@ -243,6 +243,7 @@ body {
 
 .arrow-allign {
   align-items: center;
+  flex-shrink: 0;
   --gap: 0.3rem;
 }
 
