@@ -27,20 +27,52 @@
   </head>
   <body>
     <header class="flex primary-header">
-      <img src="assets/images/logo.svg" alt="Snap logo" class="logo" />
+      <div>
+        <img src="assets/images/logo.svg" alt="Snap logo" class="logo" />
+      </div>
 
       <nav class="flex">
-        <ul class="flex">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
+        <ul class="primary-navigation flex">
+          <li class="flex arrow-allign">
+            <a class="text-gray fs-300" href="#">Features</a>
+            <svg
+              class="margin-left"
+              width="10"
+              height="6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke="#686868"
+                stroke-width="1.5"
+                fill="none"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </li>
+          <li class="flex arrow-allign">
+            <a class="text-gray fs-300" href="#">Company</a>
+            <svg
+              class="margin-left"
+              width="10"
+              height="6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke="#686868"
+                stroke-width="1.5"
+                fill="none"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </li>
+          <li><a class="text-gray fs-300" href="#">Careers</a></li>
+          <li><a class="text-gray fs-300" href="#">About</a></li>
         </ul>
       </nav>
-      <div class="user-buttons">
-        <a href="#">Login</a>
-        <a href="#">Register</a>
-      </div>
+      <ul class="flex user-buttons">
+        <li><a class="text-gray fs-300" href="#">Login</a></li>
+        <li><a class="text-gray fs-300 register" href="#">Register</a></li>
+      </ul>
     </header>
   </body>
 </html>
