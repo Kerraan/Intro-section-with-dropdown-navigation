@@ -31,48 +31,51 @@
         <img src="assets/images/logo.svg" alt="Snap logo" class="logo" />
       </div>
 
-      <nav class="flex">
+      <nav class="nav-user-buttons flex">
         <ul class="primary-navigation flex">
           <li class="flex arrow-allign">
             <a class="text-gray fs-300" href="#">Features</a>
-            <svg
-              class="margin-left"
-              width="10"
-              height="6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke="#686868"
-                stroke-width="1.5"
-                fill="none"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
+            <img class="margin-left" src="assets/images/icon-arrow-down.svg" />
           </li>
           <li class="flex arrow-allign">
             <a class="text-gray fs-300" href="#">Company</a>
-            <svg
-              class="margin-left"
-              width="10"
-              height="6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke="#686868"
-                stroke-width="1.5"
-                fill="none"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
+            <img class="margin-left" src="assets/images/icon-arrow-down.svg" />
           </li>
           <li><a class="text-gray fs-300" href="#">Careers</a></li>
           <li><a class="text-gray fs-300" href="#">About</a></li>
         </ul>
+        <ul class="flex user-buttons">
+          <li><a class="text-gray fs-300" href="#">Login</a></li>
+          <li><a class="text-gray fs-300 register" href="#">Register</a></li>
+        </ul>
       </nav>
-      <ul class="flex user-buttons">
-        <li><a class="text-gray fs-300" href="#">Login</a></li>
-        <li><a class="text-gray fs-300 register" href="#">Register</a></li>
-      </ul>
     </header>
+
+    <main>
+      <div class="grid grid-container">
+        <div class="hero-section flex">
+          <h1 class="title text-black">Make remote work</h1>
+          <div class="p-btn flex">
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivy soar.
+            </p>
+            <a class="learn-more text-white" href="#">Learn more</a>
+          </div>
+
+          <div class="logo-clients flex">
+            <img src="assets/images/client-databiz.svg" alt="databiz logo" />
+            <img
+              src="assets/images/client-audiophile.svg"
+              alt="audiophile logo"
+            />
+            <img src="assets/images/client-meet.svg" alt="meet logo" />
+            <img src="assets/images/client-maker.svg" alt="maker logo" />
+          </div>
+        </div>
+
+        <img class="hero-image" src="assets/images/image-hero-desktop.png" />
+      </div>
+    </main>
   </body>
 </html>
