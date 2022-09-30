@@ -22,60 +22,75 @@
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="css/style.css" />
-
+    <script src="navigation.js" defer></script>
     <title>Snap</title>
   </head>
-  <body>
+  <body class="bg-white">
     <header class="flex primary-header">
       <div>
         <img src="assets/images/logo.svg" alt="Snap logo" class="logo" />
       </div>
+      <button class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </button>
 
-      <nav class="primary-navigation flex">
-        <ul class="flex menu">
-          <li class="flex margin-left">
+      <nav class="primary-navigation bg-white flex">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="flex menu fs-300"
+        >
+          <li class="flex">
             <a href="#">Features</a>
             <img src="assets/images/icon-arrow-down.svg" />
           </li>
-          <li class="flex margin-left">
+          <li class="fs-300 flex">
             <a href="#">Company</a>
             <img src="assets/images/icon-arrow-down.svg" />
           </li>
-          <li><a href="#">Careers</a></li>
+          <li class="fs-300"><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
         </ul>
-        <ul class="flex">
+        <ul class="flex menu fs-300 user-buttons">
           <li><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
+          <li><a class="register" href="#">Register</a></li>
         </ul>
       </nav>
+      <div class="mobile-nav-overlay"></div>
     </header>
 
-    <!-- <main>
-      <div class="grid grid-container">
-        <div class="hero-section flex">
-          <h1 class="title text-black">Make remote work</h1>
-          <div class="p-btn flex">
-            <p>
-              Get your team in sync, no matter your location. Streamline
-              processes, create team rituals, and watch productivy soar.
-            </p>
-            <a class="learn-more text-white" href="#">Learn more</a>
-          </div>
+    <main class="flex main-content">
+      <picture class="hero-image hero">
+        <source
+          srcset="assets/images/image-hero-desktop.png"
+          media="(min-width: 70em)"
+        />
+        <img
+          class="hero-image"
+          src="assets/images/image-hero-mobile.png"
+          alt="Artistic image with man on laptop"
+        />
+      </picture>
 
-          <div class="logo-clients flex">
-            <img src="assets/images/client-databiz.svg" alt="databiz logo" />
-            <img
-              src="assets/images/client-audiophile.svg"
-              alt="audiophile logo"
-            />
-            <img src="assets/images/client-meet.svg" alt="meet logo" />
-            <img src="assets/images/client-maker.svg" alt="maker logo" />
-          </div>
+      <div class="hero-section flex">
+        <h1 class="text-black fs-700 title">
+          Make <br class="break" />remote work
+        </h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivy soar.
+        </p>
+        <a class="learn-more bg-black text-white fs-400" href="#">Learn more</a>
+        <div class="flex logo-clients">
+          <img src="assets/images/client-databiz.svg" alt="Databiz logo" />
+          <img
+            src="assets/images/client-audiophile.svg"
+            alt="Audiophile logo"
+          />
+          <img src="assets/images/client-meet.svg" alt="Meet logo" />
+          <img src="assets/images/client-maker.svg" alt="Maker logo" />
         </div>
-
-        <img class="hero-image" src="assets/images/image-hero-desktop.png" />
       </div>
-    </main> -->
+    </main>
   </body>
 </html>

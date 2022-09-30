@@ -75,7 +75,7 @@ select {
   /* font-sizes */
   --fs-900: 9.375rem;
   --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
+  --fs-700: 2.2rem;
   --fs-600: 2rem;
   --fs-500: 1.75rem;
   --fs-400: 1.125rem;
@@ -84,6 +84,13 @@ select {
 
   /* font-families */
   --ff-sans-serif: "Epilogue", sans-serif;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 5rem;
+  }
 }
 
 /* ------------------- */
@@ -107,7 +114,7 @@ select {
 }
 
 .margin-left {
-  margin-left: var(--mleft, 0.3rem);
+  margin-left: var(--mleft, 0.2rem);
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -197,13 +204,22 @@ select {
 }
 
 .bg-white {
-  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-white));
 }
 .bg-gray {
-  color: hsl(var(--clr-gray));
+  background-color: hsl(var(--clr-gray));
 }
 .bg-black {
-  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-black));
+}
+
+body {
+  font-family: var(--ff-sans-serif);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-gray));
+  // background-color: hsl(var(--clr-black));
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
 /* ------------------- */
@@ -212,4 +228,291 @@ select {
 
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+  padding-top: 0.5rem;
+}
+
+.primary-navigation {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  padding-inline-start: 0;
+  align-items: center;
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.menu li {
+  align-items: center;
+  --gap: 0.5rem;
+}
+
+.menu img {
+  height: 100%;
+}
+
+.menu a {
+  text-decoration: none;
+  color: hsl(var(--clr-gray));
+}
+
+.user-buttons {
+  margin-right: 5rem;
+}
+
+.menu a:hover,
+.menu a:active {
+  color: hsl(var(--clr-black));
+}
+
+.register {
+  border: solid 2px hsl(var(--clr-gray));
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+}
+
+.register:hover,
+.register:active {
+  border: solid 2px hsl(var(--clr-black));
+  color: hsl(var(--clr-black));
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* ------------------- */
+/* Mobile nav          */
+/* ------------------- */
+
+@media (max-width: 70em) {
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 35%;
+    flex-direction: column;
+    margin: 0;
+    align-items: start;
+    padding: min(17rem, 12vh) 2rem;
+    justify-content: start;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu a {
+    font-size: var(--fs-400);
+  }
+
+  .menu img {
+    height: 30%;
+  }
+
+  .user-buttons {
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .register {
+    padding: 0.75rem 3rem;
+  }
+
+  .mobile-nav-overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    transition: transform 3s ease;
+  }
+
+  /* BURGER BUTTON */
+  .menu-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 2000;
+    right: 1.5rem;
+    top: 1rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 0;
+    padding: 0;
+  }
+
+  .menu-btn__burger {
+    width: 45px;
+    height: 3px;
+    background: hsl(var(--clr-black));
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background: hsl(var(--clr-black));
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateX(-22px) translateY(-10px);
+  }
+
+  .menu-btn__burger::after {
+    transform: translateX(-22px) translateY(10px);
+  }
+
+  /* BURGER BUTTON ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(18px, -18px);
+  }
+
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(18px, 18px);
+  }
+}
+
+/* ------------------- */
+/* MAIN                */
+/* ------------------- */
+
+.main-content {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-image {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.hero-section {
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+  flex-direction: column;
+  text-align: center;
+  --gap: 1.2rem;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.learn-more {
+  align-self: center;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid hsl(var(--clr-black));
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.learn-more:hover,
+.learn-more:active {
+  background-color: transparent;
+  color: hsl(var(--clr-black));
+  border: 2px solid hsl(var(--clr-black));
+}
+
+.logo-clients {
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  --gap: 1.4rem;
+  margin-bottom: 6rem;
+}
+
+.logo-clients img {
+  width: 4.2rem;
+}
+
+.break {
+  display: none;
+}
+
+@media (min-width: 35em) {
+  .logo-clients img {
+    width: 7.5rem;
+  }
+
+  .hero-section {
+    --gap: 2rem;
+  }
+
+  .learn-more {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 70em) {
+  .primary-header {
+    position: fixed;
+    width: 100%;
+  }
+
+  .main-content {
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    --gap: 10rem;
+  }
+
+  .hero-section {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+    max-width: 40rem;
+  }
+
+  .hero-section {
+    align-items: flex-start;
+    flex-basis: 25rem;
+
+    p,
+    h1 {
+      text-align: left;
+    }
+  }
+
+  .learn-more {
+    align-self: start;
+  }
+
+  .break {
+    display: block;
+  }
 }
