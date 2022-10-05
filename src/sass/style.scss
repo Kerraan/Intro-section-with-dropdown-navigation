@@ -294,9 +294,11 @@ body {
   .primary-navigation {
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 35%;
+    height: 100%;
+    width: 60vw;
     flex-direction: column;
-    margin: 0;
+    top: 0;
+    right: 0;
     align-items: start;
     padding: min(17rem, 12vh) 2rem;
     justify-content: start;
@@ -322,8 +324,9 @@ body {
   }
 
   .user-buttons {
-    margin-right: 0;
+    // margin-right: 0;
     align-items: center;
+    width: 100%;
   }
 
   .register {
@@ -486,7 +489,9 @@ body {
     height: 100vh;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     --gap: 10rem;
+    padding-inline: 3rem;
   }
 
   .hero-section {
@@ -495,16 +500,24 @@ body {
 
   .hero-image {
     order: 2;
-    max-width: 40rem;
+    max-width: 32rem;
   }
 
   .hero-section {
     align-items: flex-start;
     flex-basis: 25rem;
+    justify-content: center;
+
+    // --gap: 5rem;
+    height: 75%;
 
     p,
     h1 {
       text-align: left;
+    }
+
+    p {
+      max-width: 30rem;
     }
   }
 
@@ -514,5 +527,10 @@ body {
 
   .break {
     display: block;
+  }
+
+  .logo-clients {
+    margin-bottom: 0;
+    justify-items: flex-end;
   }
 }
