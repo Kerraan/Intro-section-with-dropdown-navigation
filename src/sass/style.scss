@@ -248,8 +248,8 @@ body {
   --gap: 0.5rem;
 }
 
-.menu img {
-  height: 100%;
+.menu li a {
+  align-items: center;
 }
 
 .menu a {
@@ -261,9 +261,12 @@ body {
   margin-right: 5rem;
 }
 
-.menu a:hover,
-.menu a:active {
+.list-item:hover .menu-name {
   color: hsl(var(--clr-black));
+}
+
+.list-item:hover .arrow {
+  stroke: hsl(var(--clr-black));
 }
 
 .register {
@@ -289,6 +292,24 @@ body {
 /* ------------------- */
 /* Dropdown            */
 /* ------------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  // display: none;
+  list-style: none;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  position: absolute;
+  top: 100%;
+  margin-top: 1rem;
+  right: 0;
+  --gap: 1rem;
+}
 
 /* ------------------- */
 /* Mobile nav          */
