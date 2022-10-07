@@ -244,7 +244,7 @@ body {
 }
 
 .menu li {
-  align-items: center;
+  align-items: left;
   --gap: 0.5rem;
 }
 
@@ -281,6 +281,10 @@ body {
   color: hsl(var(--clr-black));
 }
 
+.login:hover {
+  color: hsl(var(--clr-black));
+}
+
 .mobile-nav-toggle {
   display: none;
 }
@@ -297,7 +301,7 @@ body {
 }
 
 .dropdown-content {
-  // display: none;
+  display: none;
   list-style: none;
   flex-direction: column;
   background: white;
@@ -309,6 +313,18 @@ body {
   margin-top: 1rem;
   right: 0;
   --gap: 1rem;
+}
+
+.show {
+  display: flex;
+}
+
+.drop-item a:hover {
+  color: hsl(var(--clr-black));
+}
+
+.drop-item {
+  white-space: nowrap;
 }
 
 /* ------------------- */
@@ -430,6 +446,49 @@ body {
   .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(18px, 18px);
   }
+
+  /* ------------------- */
+  /* Mobile Dropdown     */
+  /* ------------------- */
+
+  .menu {
+    width: 10rem;
+  }
+
+  .dropdown-content {
+    all: initial;
+    margin-top: 1rem;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 2rem;
+    gap: 1.5rem;
+    font-family: var(--ff-sans-serif);
+  }
+
+  .dropdown {
+    flex-direction: column;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  // .dropdown-content {
+  //   display: none;
+  //   list-style: none;
+  //   flex-direction: column;
+  //   background: white;
+  //   box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
+  //   border-radius: 12px;
+  //   padding: 2rem;
+  //   position: absolute;
+  //   top: 100%;
+  //   margin-top: 1rem;
+  //   right: 0;
+  //   --gap: 1rem;
+  // }
 }
 
 /* ------------------- */
@@ -475,11 +534,10 @@ body {
 }
 
 .logo-clients {
-  margin-top: 1.5rem;
   align-items: center;
   justify-content: center;
   --gap: 1.4rem;
-  margin-bottom: 6rem;
+  margin-top: 1.5rem;
 }
 
 .logo-clients img {
@@ -525,6 +583,7 @@ body {
 
   .hero-image {
     order: 2;
+    flex: 1;
     max-width: 32rem;
   }
 
@@ -534,11 +593,12 @@ body {
     justify-content: center;
 
     // --gap: 5rem;
-    height: 75%;
+    // height: 53%;
 
     p,
     h1 {
       text-align: left;
+      flex: 1;
     }
 
     p {
@@ -548,6 +608,7 @@ body {
 
   .learn-more {
     align-self: start;
+    flex: 1;
   }
 
   .break {
@@ -555,7 +616,7 @@ body {
   }
 
   .logo-clients {
-    margin-bottom: 0;
-    justify-items: flex-end;
+    margin-top: 6rem;
+    flex: 1;
   }
 }

@@ -40,19 +40,23 @@
           data-visible="false"
           class="flex menu fs-300"
         >
-          <li class="list-item dropdown flex">
+          <li class="list-item dropdown flex" onclick="showFeatures()">
             <a class="menu-name flex" href="#"
-              >Features
-              <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+              >Features<svg
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   class="arrow"
                   stroke="#686868"
                   stroke-width="1.5"
                   fill="none"
                   d="m1 1 4 4 4-4"
-                /></svg
-            ></a>
-            <ul class="flex dropdown-content">
+                />
+              </svg>
+            </a>
+            <ul class="flex dropdown-content features">
               <li class="drop-item">
                 <a class="flex" href="#"
                   ><img src="assets/images/icon-todo.svg" />Todo List</a
@@ -75,15 +79,41 @@
               </li>
             </ul>
           </li>
-          <li class="fs-300 flex">
-            <a href="#">Company</a>
-            <img src="assets/images/icon-arrow-down.svg" />
+          <li class="list-item dropdown flex" onclick="showCompany()">
+            <a class="menu-name flex" href="#"
+              >Company<svg
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="arrow"
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+            <ul class="flex dropdown-content company">
+              <li class="drop-item">
+                <a class="flex" href="#">History</a>
+              </li>
+              <li class="drop-item">
+                <a href="#">Our Team</a>
+              </li>
+              <li class="drop-item">
+                <a class="flex" href="#">Blog</a>
+              </li>
+            </ul>
           </li>
-          <li class="fs-300"><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
+          <li class="list-item fs-300">
+            <a class="menu-name" href="#">Careers</a>
+          </li>
+          <li class="list-item"><a class="menu-name" href="#">About</a></li>
         </ul>
         <ul class="flex menu fs-300 user-buttons">
-          <li><a href="#">Login</a></li>
+          <li><a class="login" href="#">Login</a></li>
           <li><a class="register" href="#">Register</a></li>
         </ul>
       </nav>

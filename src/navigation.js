@@ -16,3 +16,11 @@ menuBtn.addEventListener("click", () => {
     overlay.style.display = "none";
   }
 });
+
+function showFeatures() {
+  document.querySelector(".features").classList.toggle("show");
+}
+
+function showCompany() {
+  document.querySelector(".company").classList.toggle("show");
+}
