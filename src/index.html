@@ -40,9 +40,13 @@
           data-visible="false"
           class="flex menu fs-300"
         >
-          <li class="list-item dropdown flex" onclick="showFeatures()">
+          <li
+            class="list-item dropdown flex"
+            onclick="showFeatures(), rotateArrowFeatures()"
+          >
             <a class="menu-name flex" href="#"
               >Features<svg
+                class="arrow-rotate-features"
                 width="10"
                 height="6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,9 +83,13 @@
               </li>
             </ul>
           </li>
-          <li class="list-item dropdown flex" onclick="showCompany()">
+          <li
+            class="list-item dropdown flex"
+            onclick="showCompany(), rotateArrowCompany()"
+          >
             <a class="menu-name flex" href="#"
               >Company<svg
+                class="arrow-rotate-company"
                 width="10"
                 height="6"
                 xmlns="http://www.w3.org/2000/svg"

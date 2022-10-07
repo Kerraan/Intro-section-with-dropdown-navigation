@@ -315,8 +315,17 @@ body {
   --gap: 1rem;
 }
 
+.arrow-rotate-features,
+.arrow-rotate-company {
+  transition: all 0.2s ease;
+}
+
 .show {
   display: flex;
+}
+
+.rotate {
+  transform: rotate(-180deg);
 }
 
 .drop-item a:hover {
@@ -325,6 +334,10 @@ body {
 
 .drop-item {
   white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
 }
 
 /* ------------------- */
@@ -474,21 +487,6 @@ body {
   .show {
     display: flex;
   }
-
-  // .dropdown-content {
-  //   display: none;
-  //   list-style: none;
-  //   flex-direction: column;
-  //   background: white;
-  //   box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
-  //   border-radius: 12px;
-  //   padding: 2rem;
-  //   position: absolute;
-  //   top: 100%;
-  //   margin-top: 1rem;
-  //   right: 0;
-  //   --gap: 1rem;
-  // }
 }
 
 /* ------------------- */

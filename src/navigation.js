@@ -24,3 +24,11 @@ function showFeatures() {
 function showCompany() {
   document.querySelector(".company").classList.toggle("show");
 }
+
+function rotateArrowFeatures() {
+  document.querySelector(".arrow-rotate-features").classList.toggle("rotate");
+}
+
+function rotateArrowCompany() {
+  document.querySelector(".arrow-rotate-company").classList.toggle("rotate");
+}
